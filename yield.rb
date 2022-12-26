@@ -16,3 +16,14 @@ def one_two_three
 end
 
 one_two_three { |number| puts number * 10}
+puts '----------------------------------'
+def one_two_three_new(num1, num2, num3)
+  res1 = yield(num1)
+  puts res1
+  res2 = yield(num2)
+  puts res2
+  res3 = yield(num3)
+  puts res3
+end
+
+one_two_three_new(1, 2, 3) { |number| number * 10}
